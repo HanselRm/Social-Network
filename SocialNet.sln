@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNet", "SocialNet\SocialNet.csproj", "{84D76373-B221-428F-8490-903C83450EB5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{8547FF09-8B95-4FCE-96F6-3E87F23AE195}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{E2107CFC-BE9D-417B-95E5-B68EAF7F109E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{FE991D11-1944-4056-951D-08D6BC8CA7B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{C1B21EAB-4B45-4E31-B0D6-C18F1A035623}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{0FDBD842-F09E-47BF-AC91-D2BB023C6BC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNet.Core.Application", "SocialNet.Core.Application\SocialNet.Core.Application.csproj", "{70D47258-C277-4F8B-BEC0-F17D50C3C5A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNet.Core.Domain", "SocialNet.Core.Domain\SocialNet.Core.Domain.csproj", "{8E1AABED-1BCB-4C7D-9BC4-1D2CA51A0CDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNet.Infrastructure.Persistence", "SocialNet.Infrastructure.Persistence\SocialNet.Infrastructure.Persistence.csproj", "{45E01F06-B2F4-472F-ACB4-3EFE1F2C37BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84D76373-B221-428F-8490-903C83450EB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84D76373-B221-428F-8490-903C83450EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84D76373-B221-428F-8490-903C83450EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84D76373-B221-428F-8490-903C83450EB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70D47258-C277-4F8B-BEC0-F17D50C3C5A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70D47258-C277-4F8B-BEC0-F17D50C3C5A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70D47258-C277-4F8B-BEC0-F17D50C3C5A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70D47258-C277-4F8B-BEC0-F17D50C3C5A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E1AABED-1BCB-4C7D-9BC4-1D2CA51A0CDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E1AABED-1BCB-4C7D-9BC4-1D2CA51A0CDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E1AABED-1BCB-4C7D-9BC4-1D2CA51A0CDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E1AABED-1BCB-4C7D-9BC4-1D2CA51A0CDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45E01F06-B2F4-472F-ACB4-3EFE1F2C37BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45E01F06-B2F4-472F-ACB4-3EFE1F2C37BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45E01F06-B2F4-472F-ACB4-3EFE1F2C37BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45E01F06-B2F4-472F-ACB4-3EFE1F2C37BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{84D76373-B221-428F-8490-903C83450EB5} = {0FDBD842-F09E-47BF-AC91-D2BB023C6BC4}
+		{E2107CFC-BE9D-417B-95E5-B68EAF7F109E} = {8547FF09-8B95-4FCE-96F6-3E87F23AE195}
+		{FE991D11-1944-4056-951D-08D6BC8CA7B3} = {8547FF09-8B95-4FCE-96F6-3E87F23AE195}
+		{C1B21EAB-4B45-4E31-B0D6-C18F1A035623} = {8547FF09-8B95-4FCE-96F6-3E87F23AE195}
+		{0FDBD842-F09E-47BF-AC91-D2BB023C6BC4} = {C1B21EAB-4B45-4E31-B0D6-C18F1A035623}
+		{70D47258-C277-4F8B-BEC0-F17D50C3C5A3} = {E2107CFC-BE9D-417B-95E5-B68EAF7F109E}
+		{8E1AABED-1BCB-4C7D-9BC4-1D2CA51A0CDE} = {E2107CFC-BE9D-417B-95E5-B68EAF7F109E}
+		{45E01F06-B2F4-472F-ACB4-3EFE1F2C37BE} = {FE991D11-1944-4056-951D-08D6BC8CA7B3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F84BDCF1-D741-4A33-A63C-09613419FD68}
+	EndGlobalSection
+EndGlobal
