@@ -18,5 +18,6 @@ namespace SocialNet.Core.Domain.Entities
         public User User { get; set; }
         public Comments ParentComment { get; set; }
         public  ICollection<Comments> ChildComments { get; set; }
+
     }
 }
