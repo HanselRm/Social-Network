@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SocialNet.Core.Application.Helpers;
 using SocialNet.Core.Application.Interfaces.Repositories;
+using SocialNet.Core.Application.ViewModels.Users;
 using SocialNet.Core.Domain.Entities;
 using SocialNet.Infrastructure.Persistence.Context;
 
@@ -27,13 +28,13 @@ namespace SocialNet.Infrastructure.Persistence.Repositories
             return await base.AddAsync(entity);
         }
 
-        /*public async Task<Users> LoginAsync(LoginViewModel loginVm)
+        public async Task<User> LoginAsync(LoginViewModel loginVm)
         {
             string passwordEncrypy = PasswordEncryption.ComputeSha256Hash(loginVm.Password);
-            Users user = await _dbContext.Set<Users>()
-                .FirstOrDefaultAsync(user => user.Password == passwordEncrypy && user.User == loginVm.Username);
+            User user = await dbContext.Set<User>()
+                .FirstOrDefaultAsync(user => user.Password == passwordEncrypy && user.UserName == loginVm.UserName);
             return user;
-        }*/
+        }
     }
 
 }

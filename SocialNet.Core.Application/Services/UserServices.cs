@@ -13,6 +13,28 @@ namespace SocialNet.Core.Application.Services
         { 
             _userRepository = userRepository;
         }
+        public async Task<SaveUserViewModel> Login(LoginViewModel vm)
+        {
+            User user = await _userRepository.LoginAsync(vm);
+
+            if (user == null)
+            {
+                return null;
+            }
+            SaveUserViewModel Uservm = new();
+            Uservm.Id = user.Id;
+            Uservm.Name = user.Name;
+            Uservm.LastName = user.LastName;
+            Uservm.Email = user.Email;
+            Uservm.UserName = user.UserName;
+            Uservm.Password = user.Password;
+            Uservm.Status = user.Status;
+            Uservm.Imagen = user.Imagen;
+            Uservm.Phone = user.Phone;
+            
+
+            return Uservm;
+        }
         public async Task<SaveUserViewModel> Add(SaveUserViewModel vm)
         {
             User user = new User
