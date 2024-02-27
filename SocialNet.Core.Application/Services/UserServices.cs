@@ -64,15 +64,16 @@ namespace SocialNet.Core.Application.Services
             return model;
         }
 
+        public Task<List<SaveUserViewModel>> GetAllViewModels()
+        {
+            throw new NotImplementedException();
+        }
+
         public Task Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<List<SaveUserViewModel>> GetAllViewModels()
-        {
-            throw new NotImplementedException();
-        }
 
         public Task<SaveUserViewModel> GetByIdSaveViewModel(int id)
         {
