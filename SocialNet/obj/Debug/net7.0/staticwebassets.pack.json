@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet\\wwwroot\\images\\Doctors\\0\\10cad7fb-f69f-4840-a6e7-50a5baf24863.jpg",
+      "PackagePath": "staticwebassets\\images\\Doctors\\0\\10cad7fb-f69f-4840-a6e7-50a5baf24863.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet\\wwwroot\\images\\User\\0\\b4afcde4-e48c-4f85-ab5c-b10bc84b070f.jpg",
+      "PackagePath": "staticwebassets\\images\\User\\0\\b4afcde4-e48c-4f85-ab5c-b10bc84b070f.jpg"
+    },
+    {
       "Id": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

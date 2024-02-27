@@ -556,3 +556,4 @@ C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\SocialNet.pdb
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\SocialNet.genruntimeconfig.cache
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\ref\SocialNet.dll
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\SocialNet.sourcelink.json

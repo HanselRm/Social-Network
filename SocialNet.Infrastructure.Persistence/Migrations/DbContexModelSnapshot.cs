@@ -193,8 +193,8 @@ namespace SocialNet.Infrastructure.Persistence.Migrations
                     b.Property<int>("Phone")
                         .HasColumnType("int");
 
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
 
                     b.Property<string>("UserName")
                         .IsRequired()

@@ -9,3 +9,4 @@ C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core.Domain\obj\Debug\net7.0\refint\SocialNet.Core.Domain.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core.Domain\obj\Debug\net7.0\SocialNet.Core.Domain.pdb
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core.Domain\obj\Debug\net7.0\ref\SocialNet.Core.Domain.dll
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core.Domain\obj\Debug\net7.0\SocialNet.Core.Domain.sourcelink.json

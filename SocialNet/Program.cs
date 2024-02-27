@@ -1,10 +1,16 @@
 using SocialNet.Infrastructure.Persistence;
+using SocialNet.Core.Application;
+using SocialNet.Core.Application.Helpers;
+using SocialNet.Core.Application.Interfaces;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddPersistenceInfrastructure(builder.Configuration);
+builder.Services.AddAplicationLayer(builder.Configuration);
+
+builder.Services.AddTransient<UploadFiles<IEntity>, UploadFiles<IEntity>>();
 
 var app = builder.Build();
 

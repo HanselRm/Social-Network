@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SocialNet.Infrastructure.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2234119ecd6997b00edaeb933522da7bff03d72d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f27e44d82c90b9798b0857dd9320727402f3a207")]
 [assembly: System.Reflection.AssemblyProductAttribute("SocialNet.Infrastructure.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SocialNet.Infrastructure.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

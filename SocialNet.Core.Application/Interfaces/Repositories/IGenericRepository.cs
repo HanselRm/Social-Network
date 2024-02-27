@@ -13,4 +13,4 @@ namespace SocialNet.Core.Application.Interfaces.Repositories
         Task<List<Entity>> GetAllWithIncludeAsync(List<string> properties);
     }
 }
-}
+
