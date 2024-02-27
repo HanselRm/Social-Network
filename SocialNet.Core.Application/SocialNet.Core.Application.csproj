@@ -18,4 +18,10 @@
     <ProjectReference Include="..\SocialNet.Core.Domain\SocialNet.Core.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>
