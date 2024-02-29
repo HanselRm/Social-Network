@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNet", "SocialNet\SocialNet.csproj", "{84D76373-B221-428F-8490-903C83450EB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialNet", "SocialNet\SocialNet.csproj", "{84D76373-B221-428F-8490-903C83450EB5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{8547FF09-8B95-4FCE-96F6-3E87F23AE195}"
 EndProject
@@ -15,11 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{0FDBD842-F09E-47BF-AC91-D2BB023C6BC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNet.Core.Application", "SocialNet.Core.Application\SocialNet.Core.Application.csproj", "{70D47258-C277-4F8B-BEC0-F17D50C3C5A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialNet.Core.Application", "SocialNet.Core.Application\SocialNet.Core.Application.csproj", "{70D47258-C277-4F8B-BEC0-F17D50C3C5A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNet.Core.Domain", "SocialNet.Core.Domain\SocialNet.Core.Domain.csproj", "{8E1AABED-1BCB-4C7D-9BC4-1D2CA51A0CDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialNet.Core.Domain", "SocialNet.Core.Domain\SocialNet.Core.Domain.csproj", "{8E1AABED-1BCB-4C7D-9BC4-1D2CA51A0CDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNet.Infrastructure.Persistence", "SocialNet.Infrastructure.Persistence\SocialNet.Infrastructure.Persistence.csproj", "{45E01F06-B2F4-472F-ACB4-3EFE1F2C37BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialNet.Infrastructure.Persistence", "SocialNet.Infrastructure.Persistence\SocialNet.Infrastructure.Persistence.csproj", "{45E01F06-B2F4-472F-ACB4-3EFE1F2C37BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNet.Infrastructure.Shared", "SocialNet.Infrastructure.Shared\SocialNet.Infrastructure.Shared.csproj", "{548E19C7-4B7F-4879-87AE-1E182E352A40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{45E01F06-B2F4-472F-ACB4-3EFE1F2C37BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45E01F06-B2F4-472F-ACB4-3EFE1F2C37BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45E01F06-B2F4-472F-ACB4-3EFE1F2C37BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{548E19C7-4B7F-4879-87AE-1E182E352A40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{548E19C7-4B7F-4879-87AE-1E182E352A40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{548E19C7-4B7F-4879-87AE-1E182E352A40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{548E19C7-4B7F-4879-87AE-1E182E352A40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +62,7 @@ Global
 		{70D47258-C277-4F8B-BEC0-F17D50C3C5A3} = {E2107CFC-BE9D-417B-95E5-B68EAF7F109E}
 		{8E1AABED-1BCB-4C7D-9BC4-1D2CA51A0CDE} = {E2107CFC-BE9D-417B-95E5-B68EAF7F109E}
 		{45E01F06-B2F4-472F-ACB4-3EFE1F2C37BE} = {FE991D11-1944-4056-951D-08D6BC8CA7B3}
+		{548E19C7-4B7F-4879-87AE-1E182E352A40} = {FE991D11-1944-4056-951D-08D6BC8CA7B3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F84BDCF1-D741-4A33-A63C-09613419FD68}

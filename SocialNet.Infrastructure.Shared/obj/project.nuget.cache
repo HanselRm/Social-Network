@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "zWEC4tT6vi7yT0oKXqf/c5QittU+H+h8S6PkTzjo1P+NzlA5ExL8g4rAKF3XessqMK9ahjKabjwH1MF3jEXDaw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet.Infrastructure.Shared\\SocialNet.Infrastructure.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
+    "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\mailkit\\4.3.0\\mailkit.4.3.0.nupkg.sha512",
+    "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.0\\microsoft.extensions.configuration.binder.7.0.0.nupkg.sha512",
+    "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\7.0.0\\microsoft.extensions.options.configurationextensions.7.0.0.nupkg.sha512",
+    "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\mimekit\\4.3.0\\mimekit.4.3.0.nupkg.sha512",
+    "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\system.formats.asn1\\7.0.0\\system.formats.asn1.7.0.0.nupkg.sha512",
+    "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\system.security.cryptography.pkcs\\7.0.3\\system.security.cryptography.pkcs.7.0.3.nupkg.sha512",
+    "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\system.text.encoding.codepages\\7.0.0\\system.text.encoding.codepages.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
