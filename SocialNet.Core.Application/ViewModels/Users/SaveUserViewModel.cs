@@ -20,9 +20,9 @@ namespace SocialNet.Core.Application.ViewModels.Users
 
         [Required(ErrorMessage = "El campo Correo es requerido")]
         public string Email { get; set; }
-        public string? Imagen { get; set; }
+        public string? Imagen { get; set; } 
         [DataType(DataType.Upload)]
-        public IFormFile File { get; set; }
+        public IFormFile File { get; set; } //no
 
         [Required(ErrorMessage = "El campo Nombre de Usuario es requerido")]
         public string UserName { get; set; }
@@ -31,7 +31,7 @@ namespace SocialNet.Core.Application.ViewModels.Users
 
         [Required(ErrorMessage = "Las contraseñas deben de coincidir")]
         [Compare(nameof(Password))]
-        public string ConfirmPassword { get; set; }
+        public string ConfirmPassword { get; set; } //no
         public bool Status { get; set; }
     }
 }

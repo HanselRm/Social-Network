@@ -2,14 +2,16 @@
 
 namespace SocialNet.Core.Application.Interfaces.Services
 {
-        public interface IGenericServices<SaveViewModel> where SaveViewModel : class
+        public interface IGenericServices<SaveViewModel, ViewModel, Entity> 
+            where SaveViewModel : class
+            where ViewModel : class
+            where Entity : class
         {
-            Task Update(SaveViewModel vm);
+            Task Update(SaveViewModel vm, int id);
             Task<SaveViewModel> Add(SaveViewModel vm);
             Task Delete(int id);
             Task<SaveViewModel> GetByIdSaveViewModel(int id);
-            Task<List<SaveViewModel>> GetAllViewModels();
-
+            Task<List<ViewModel>> GetAllViewModels();
         }
     
 }

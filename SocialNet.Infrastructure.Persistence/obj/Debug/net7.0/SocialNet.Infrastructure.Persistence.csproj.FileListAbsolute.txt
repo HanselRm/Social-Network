@@ -10,9 +10,9 @@ C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Infr
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Infrastructure.Persistence\obj\Debug\net7.0\SocialNet.Infrastructure.Persistence.AssemblyInfoInputs.cache
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Infrastructure.Persistence\obj\Debug\net7.0\SocialNet.Infrastructure.Persistence.AssemblyInfo.cs
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Infrastructure.Persistence\obj\Debug\net7.0\SocialNet.Infrastructure.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Infrastructure.Persistence\obj\Debug\net7.0\SocialNet.Infrastructure.Persistence.sourcelink.json
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Infrastructure.Persistence\obj\Debug\net7.0\SocialNet.Infrastructure.Persistence.csproj.CopyComplete
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Infrastructure.Persistence\obj\Debug\net7.0\SocialNet.Infrastructure.Persistence.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Infrastructure.Persistence\obj\Debug\net7.0\refint\SocialNet.Infrastructure.Persistence.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Infrastructure.Persistence\obj\Debug\net7.0\SocialNet.Infrastructure.Persistence.pdb
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Infrastructure.Persistence\obj\Debug\net7.0\ref\SocialNet.Infrastructure.Persistence.dll
-C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Infrastructure.Persistence\obj\Debug\net7.0\SocialNet.Infrastructure.Persistence.sourcelink.json

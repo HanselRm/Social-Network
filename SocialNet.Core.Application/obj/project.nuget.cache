@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "YEywOXSI+A31WZ8q4dXlr2KMIaew2xpi9IfitIRbolIfpN6WXX1uCXn+OjFnW530voDNcug/SD9iSMTepLgeHA==",
+  "dgSpecHash": "2gt5tECEgBLkvJanDV7aUbbcaU0mEts1BNkyJNyViv2Y1W2BtUeQ+L6e8hdKEYxELCIS5snabKype95zjD2KfA==",
   "success": true,
   "projectFilePath": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet.Core.Application\\SocialNet.Core.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.2\\microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
     "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",

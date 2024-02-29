@@ -302,6 +302,7 @@ C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\refs\System.Xml.XPath.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\refs\System.Xml.XPath.XDocument.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\refs\WindowsBase.dll
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\AutoMapper.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\Azure.Identity.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\Humanizer.dll
@@ -540,6 +541,7 @@ C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\SocialNet.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\SocialNet.RazorAssemblyInfo.cache
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\SocialNet.RazorAssemblyInfo.cs
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\SocialNet.sourcelink.json
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\staticwebassets.development.json
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\staticwebassets\msbuild.SocialNet.Microsoft.AspNetCore.StaticWebAssets.props
@@ -556,4 +558,3 @@ C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\SocialNet.pdb
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\SocialNet.genruntimeconfig.cache
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\ref\SocialNet.dll
-C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\SocialNet.sourcelink.json

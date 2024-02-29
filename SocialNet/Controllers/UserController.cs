@@ -85,7 +85,14 @@ namespace SocialNet.Controllers
 
                 return View("Register", model);
             }
+            var ListModel = await _userServices.GetAllViewModels();
+            UserViewModel entity = ListModel.FirstOrDefault(u => u.UserName == model.UserName);
 
+            if (entity != null)
+            {
+                ModelState.AddModelError("UserValidation", "Nombre de usuario esta en uso");
+                return View();
+            }
             model.Imagen = _uploadFiles.UploadFile(model.File, model);
             await _userServices.Add(model);
 

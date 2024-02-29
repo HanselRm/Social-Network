@@ -20,9 +20,10 @@ namespace SocialNet.Infrastructure.Persistence.Repositories
             await dbContext.SaveChangesAsync();
             return entity;
         }
-        public virtual async Task UdapteAsync(Entity entity)
+        public virtual async Task UdapteAsync(Entity entity, int id)
         {
-            dbContext.Entry(entity).State = EntityState.Modified;
+            Entity entry = await dbContext.Set<Entity>().FindAsync(id);
+            dbContext.Entry(entry).CurrentValues.SetValues(entity);
             await dbContext.SaveChangesAsync();
         }
         public async Task DeleteAsync(Entity entity)

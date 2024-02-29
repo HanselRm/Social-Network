@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "FySmvknR/dnZrZW2FYVE6kg1Ctiz7Y9thXu0MsDjTccXwoPa+a6piSEbje8g+oTbYX8P6JLwMd4ROwFq3r9UdA==",
+  "dgSpecHash": "oiIJOP06ASqCY70rQ3lPUqMlIN+0Phc9SE7mgzm1per6tC/7d5U6kfdWTqdH3kIahDJdBawPgxyQhtMWsO4OQw==",
   "success": true,
   "projectFilePath": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet\\SocialNet.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",

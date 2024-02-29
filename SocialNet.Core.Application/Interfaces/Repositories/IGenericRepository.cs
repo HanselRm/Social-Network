@@ -6,7 +6,7 @@ namespace SocialNet.Core.Application.Interfaces.Repositories
         where Entity : class
     {
         Task<Entity> AddAsync(Entity entity);
-        Task UdapteAsync(Entity entity);
+        Task UdapteAsync(Entity entity, int id);
         Task DeleteAsync(Entity entity);
         Task<List<Entity>> GetAllAsync();
         Task<Entity> GetByIdAsync(int id);
