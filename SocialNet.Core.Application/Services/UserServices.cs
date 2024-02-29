@@ -1,6 +1,7 @@
 ﻿
 using AutoMapper;
 using SocialNet.Core.Application.DTOS.Email;
+using SocialNet.Core.Application.Helpers;
 using SocialNet.Core.Application.Interfaces.Repositories;
 using SocialNet.Core.Application.Interfaces.Services;
 using SocialNet.Core.Application.ViewModels.Users;
@@ -36,13 +37,35 @@ namespace SocialNet.Core.Application.Services
         {
 
             SaveUserViewModel Uservm = await base.Add(vm);
-            _emailServices.sendAsync(new EmailRequest
+            await _emailServices.sendAsync(new EmailRequest
             {
                 To = vm.Email,
                 Subject = "Bienvenido a la red social",
                 Body = $"<a href=\"https://localhost:7071/User/ChangeUserStatus/{Uservm.Id}\">Activar Usuario</a>"
             });
             return Uservm;
+        }
+
+        public async Task<Boolean> GetByUserNameViewModel(string userName)
+        {
+            var userList = await _userRepository.GetAllAsync();
+            User user1 = userList.FirstOrDefault(u => u.UserName == userName);
+
+            if(user1 != null)
+            {
+                var password = PasswordGenerate.GenerarPassword();
+                user1.Password = password;
+                await _userRepository.UdapteAsync(user1, user1.Id);
+                await _emailServices.sendAsync(new EmailRequest
+                {
+                    To = user1.Email,
+                    Subject = "Bienvenido a la red social",
+                    Body = $"Su nueva contraseña es: {password}"
+                });
+                return true;
+            }
+
+            return false;
         }
 
     }

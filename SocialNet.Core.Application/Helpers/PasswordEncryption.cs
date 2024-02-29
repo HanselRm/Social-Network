@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SocialNet.Core.Application.Helpers
 {
-    public class PasswordEncryption
+    public static class PasswordEncryption
     {
         public static string ComputeSha256Hash(string password)
         {

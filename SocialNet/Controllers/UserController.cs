@@ -42,7 +42,7 @@ namespace SocialNet.Controllers
             }
             SaveUserViewModel userVm = await _userServices.Login(model);
 
-            if(userVm != null)
+            if (userVm != null)
             {
                 if (userVm.Status == false)
                 {
@@ -53,13 +53,13 @@ namespace SocialNet.Controllers
                     HttpContext.Session.Set<SaveUserViewModel>("User", userVm);
                     return RedirectToRoute(new { controller = "Home", action = "Index" });
                 }
-                
+
             }
             else
             {
                 ModelState.AddModelError("UserValidation", "Datos incorrectos");
             }
-            
+
             return View();
         }
 
@@ -112,12 +112,31 @@ namespace SocialNet.Controllers
             if (usuario != null)
             {
                 usuario.Status = true;
-                await _userServices.Update(usuario,Id);
+                await _userServices.Update(usuario, Id);
 
-                // Redirigir a una página de confirmación o mostrar un mensaje
+
                 return View("ChangeUserStatus");
             }
             return RedirectToRoute(new { controller = "User", action = "Index" });
+        }
+
+        public async Task<IActionResult> PasswordRecover()
+        {
+            return View("PasswordRecover");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PasswordRecover(string UserName)
+        {
+            var bolean = await _userServices.GetByUserNameViewModel(UserName);
+            if (bolean)
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+
+            ModelState.AddModelError("UserValidation", "Nombre de usuario incorrecto");
+            return View();
+            
         }
     }
     

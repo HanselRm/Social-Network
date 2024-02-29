@@ -16,7 +16,7 @@ namespace SocialNet.Infrastructure.Persistence.Repositories
             this.dbContext = dbContext;
         }
 
-        public async Task UdapteAsync(User entity)
+        public override async Task UdapteAsync(User entity,int id)
         {
             entity.Password = PasswordEncryption.ComputeSha256Hash(entity.Password);
             await base.UdapteAsync(entity, entity.Id);

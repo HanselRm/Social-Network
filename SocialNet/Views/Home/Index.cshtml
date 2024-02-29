@@ -2,4 +2,82 @@
     ViewData["Title"] = "Home Page";
 }
 
+<head>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
 
+        .post {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .comment {
+            margin-left: 50px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <!-- Main Content -->
+    <div class="container">
+        <!-- New Post Form -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-8 ">
+                <div class="card">
+                    <div class="card-body" style="background-color: #d1d3d6">
+                        <form class="row align-items-baseline">
+                            <div class="form-group col-10">
+                                <label for="postContent">Que estas pensando?</label>
+                            </div>
+                            <div class="col-2">
+                                <button type="submit" class="btn btn-primary">Publicar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Posts -->
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <!-- Post 1 -->
+                <div class="card  mb-4">
+                    <div class="card-header border-0">
+                        <div class="row align-items-baseline">
+                            <div class="form-group col-8">
+
+                                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="col-2">
+                                <button type="submit" class="btn btn-primary">Eliminar</button>
+                            </div>
+                            <div class="col-1">
+                                <button type="submit" class="btn btn-primary">Editar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/imagen1.jpg" class="img-fluid">
+                    </div>
+                    <div class="card-footer border-0">
+                        <div class="d-flex align-items-center">
+                            <img src="img/imagen3.jpg" class="rounded-circle" style=" max-width: 6%; max-height: 50px;"> <!-- Establecí un ancho y alto máximo de 50px -->
+                            <p class="comment overflow-hidden flex-grow-1">Comentario: S  ed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+                            <button class="btn btn-sm btn-link">Reply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
