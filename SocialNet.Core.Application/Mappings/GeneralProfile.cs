@@ -20,6 +20,17 @@ namespace SocialNet.Core.Application.Mappings
                 .ForMember(dest => dest.LastModified, opt => opt.Ignore())
                 .ForMember(dest => dest.LastModifiedBy, opt => opt.Ignore());
 
+            CreateMap<User, UserViewModel>()
+                .ReverseMap()
+                .ForMember(dest => dest.Posts, opt => opt.Ignore())
+                .ForMember(dest => dest.FriendshipsAsUser1, opt => opt.Ignore())
+                .ForMember(dest => dest.FriendshipsAsUser2, opt => opt.Ignore())
+                .ForMember(dest => dest.Comments, opt => opt.Ignore())
+                .ForMember(dest => dest.CreateBy, opt => opt.Ignore())
+                .ForMember(dest => dest.Created, opt => opt.Ignore())
+                .ForMember(dest => dest.LastModified, opt => opt.Ignore())
+                .ForMember(dest => dest.LastModifiedBy, opt => opt.Ignore());
+
 
         }
     }

@@ -12,4 +12,9 @@
     <PackageReference Include="MimeKit" Version="4.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SocialNet.Core.Application\SocialNet.Core.Application.csproj" />
+    <ProjectReference Include="..\SocialNet.Core.Domain\SocialNet.Core.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

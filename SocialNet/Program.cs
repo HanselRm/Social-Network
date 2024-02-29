@@ -3,6 +3,7 @@ using SocialNet.Core.Application;
 using SocialNet.Core.Application.Helpers;
 using SocialNet.Core.Application.Interfaces;
 using SocialNet.MiddledWares;
+using SocialNet.Infrastructure.Shared;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -13,6 +14,7 @@ builder.Services.AddSession();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddPersistenceInfrastructure(builder.Configuration);
 builder.Services.AddAplicationLayer(builder.Configuration);
+builder.Services.AddSharedInfrastructure(builder.Configuration);
 builder.Services.AddTransient<ValidateUser, ValidateUser>();
 
 builder.Services.AddTransient<UploadFiles<IEntity>, UploadFiles<IEntity>>();

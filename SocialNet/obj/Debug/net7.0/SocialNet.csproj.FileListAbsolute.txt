@@ -558,3 +558,10 @@ C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\SocialNet.pdb
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\SocialNet.genruntimeconfig.cache
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\ref\SocialNet.dll
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\MailKit.dll
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\MimeKit.dll
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\SocialNet.Infrastructure.Shared.dll
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\SocialNet.Infrastructure.Shared.pdb

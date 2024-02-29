@@ -1,5 +1,6 @@
 ﻿
 using AutoMapper;
+using SocialNet.Core.Application.DTOS.Email;
 using SocialNet.Core.Application.Interfaces.Repositories;
 using SocialNet.Core.Application.Interfaces.Services;
 using SocialNet.Core.Application.ViewModels.Users;
@@ -11,10 +12,12 @@ namespace SocialNet.Core.Application.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
-        public UserServices(IUserRepository userRepository, IMapper mapper) : base(userRepository, mapper) 
+        private readonly IEmailServices _emailServices;
+        public UserServices(IUserRepository userRepository, IMapper mapper, IEmailServices emailServices) : base(userRepository, mapper) 
         { 
             _userRepository = userRepository;
             _mapper = mapper;
+            _emailServices = emailServices;
         }
         public async Task<SaveUserViewModel> Login(LoginViewModel vm)
         {
@@ -31,7 +34,14 @@ namespace SocialNet.Core.Application.Services
         }
         public override async Task<SaveUserViewModel> Add(SaveUserViewModel vm)
         {
+
             SaveUserViewModel Uservm = await base.Add(vm);
+            _emailServices.sendAsync(new EmailRequest
+            {
+                To = vm.Email,
+                Subject = "Bienvenido a la red social",
+                Body = $"<a href=\"https://localhost:7071/User/ChangeUserStatus/{Uservm.Id}\">Activar Usuario</a>"
+            });
             return Uservm;
         }
 

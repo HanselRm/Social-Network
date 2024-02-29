@@ -2,6 +2,7 @@
 using SocialNet.Core.Application.Helpers;
 using SocialNet.Core.Application.Interfaces;
 using SocialNet.Core.Application.Interfaces.Services;
+using SocialNet.Core.Application.Services;
 using SocialNet.Core.Application.ViewModels.Users;
 using SocialNet.Core.Domain.Entities;
 using SocialNet.MiddledWares;
@@ -37,7 +38,7 @@ namespace SocialNet.Controllers
             }
             if (!ModelState.IsValid)
             {
-                return View("Register", model);
+                return View("Index", model);
             }
             SaveUserViewModel userVm = await _userServices.Login(model);
 
@@ -104,5 +105,20 @@ namespace SocialNet.Controllers
             HttpContext.Session.Remove("User");
             return RedirectToRoute(new { controller = "User", action = "Index" });
         }
+
+        public async Task<IActionResult> ChangeUserStatus(int Id)
+        {
+            var usuario = await _userServices.GetByIdSaveViewModel(Id);
+            if (usuario != null)
+            {
+                usuario.Status = true;
+                await _userServices.Update(usuario,Id);
+
+                // Redirigir a una página de confirmación o mostrar un mensaje
+                return View("ChangeUserStatus");
+            }
+            return RedirectToRoute(new { controller = "User", action = "Index" });
+        }
     }
+    
 }
