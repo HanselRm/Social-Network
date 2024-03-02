@@ -65,12 +65,12 @@
                                 <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                             </div>
                             <input type="hidden" asp-for="Id" />
-                            <input type="hidden" asp-for="s" />
+                            <input type="hidden" asp-for="Status" />
 
                         </div>
 
                         <div class="mt-5 text-center">
-                            <button class="btn btn-info profile-button" asp-controller="Home" asp-action="Index" type="button">Volver atras</button>
+                            <a class="btn btn-info profile-button" asp-controller="Home" asp-action="Index">Volver atras</a>
                             <button class="btn btn-primary profile-button" type="submit">Guardar cambios</button>
                         </div>
                     </form>
