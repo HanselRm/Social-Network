@@ -22,6 +22,11 @@ namespace SocialNet.Infrastructure.Persistence.Repositories
             await base.UdapteAsync(entity, entity.Id);
         }
 
+        public  async Task UdapteAsyncWithoutPassword(User entity, int id)
+        {
+            await base.UdapteAsync(entity, entity.Id);
+        }
+
         public override async Task<User> AddAsync(User entity)
         {
             entity.Password = PasswordEncryption.ComputeSha256Hash(entity.Password);

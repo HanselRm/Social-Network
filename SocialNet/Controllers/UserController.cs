@@ -138,6 +138,40 @@ namespace SocialNet.Controllers
             return View();
             
         }
+
+        public async Task<IActionResult> MyProfile(int id)
+        {
+            if (!_validateUser.hasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+            EditUserViewModel user = await _userServices.GetByIdEditViewModel(id);
+
+            return View("MyProfile", user);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> MyProfile(EditUserViewModel model)
+        {
+            if (!_validateUser.hasUser())
+            {
+                return RedirectToRoute(new { controller = "Home", action = "Index" });
+            }
+
+            if (!ModelState.IsValid)
+            {
+
+                return View("MyProfile", model);
+            }
+           if(model.File != null)
+            {
+                model.Imagen = _uploadFiles.UploadFile(model.File, model);
+            }
+            
+            await _userServices.Update(model, model.Id);
+
+            return RedirectToRoute(new { controller = "Home", action = "Index" });
+        }
     }
     
 }
