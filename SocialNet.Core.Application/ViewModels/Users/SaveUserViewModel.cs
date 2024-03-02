@@ -16,7 +16,9 @@ namespace SocialNet.Core.Application.ViewModels.Users
         public string LastName { get; set; }
 
         [Required(ErrorMessage = "El campo Telefono es requerido")]
-        public int Phone { get; set; }
+        [Display(Name = "Número de Teléfono")]
+        [RegularExpression(@"^\d{10}$", ErrorMessage = "Ingrese un número de teléfono válido sin guiones.")]
+        public string Phone { get; set; }
 
         [Required(ErrorMessage = "El campo Correo es requerido")]
         public string Email { get; set; }
