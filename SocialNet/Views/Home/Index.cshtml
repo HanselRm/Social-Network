@@ -1,8 +1,23 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using SocialNet.Core.Application.ViewModels.Posts;
+@using System;
+@model SavePostViewModel;
+@using SocialNet.Core.Application.ViewModels.Users;
+@using Microsoft.AspNetCore.Http;
+@using SocialNet.Core.Application.Helpers;
+@inject IHttpContextAccessor httpContext;
+
+@{
+    SaveUserViewModel user = httpContext.HttpContext.Session.Get<SaveUserViewModel>("User");
+
+}
+@{
+
 }
 
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     <style>
         body {
             background-color: #f8f9fa;
@@ -25,18 +40,28 @@
 
 <body>
 
-    <!-- Header -->
-    <!-- Main Content -->
     <div class="container">
-        <!-- New Post Form -->
         <div class="row justify-content-center mb-4">
             <div class="col-md-8 ">
                 <div class="card">
                     <div class="card-body" style="background-color: #d1d3d6">
-                        <form class="row align-items-baseline">
+
+                        <form asp-controller="Home" asp-action="AddPost" enctype="multipart/form-data" class="row align-items-baseline">
                             <div class="form-group col-10">
-                                <label for="postContent">Que estas pensando?</label>
+                                <input asp-for="Caption" type="text" class="form-control form-control-lg" placeholder="¿Qué estás pensando?" />
+                                <span asp-validation-for="Caption" class="text-danger"></span>
                             </div>
+                            <div class="form-group col-10">
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input asp-for="File" type="file" class="custom-file-input"/>
+                                        <label class="custom-file-label" asp-for="File">
+                                            <i class="fas fa-image"></i> Seleccionar imagen
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" asp-for="IdUser" value="@user.Id" />
                             <div class="col-2">
                                 <button type="submit" class="btn btn-primary">Publicar</button>
                             </div>
@@ -46,36 +71,53 @@
             </div>
         </div>
 
-        <!-- Posts -->
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <!-- Post 1 -->
-                <div class="card  mb-4">
-                    <div class="card-header border-0">
-                        <div class="row align-items-baseline">
-                            <div class="form-group col-8">
+                @{
+                    var userPublications = ((List<PostViewModel>)ViewBag.Post)
+                        .Where(p => p.IdUser == user.Id)
+                        .OrderByDescending(a => a.Hour)
+                        .ThenByDescending(b => b.Date)
+                        .ToList();
+                        
+                    if (userPublications.Any())
+                    {
+                        foreach (PostViewModel post in userPublications)
+                        {
+                            <div class="card  mb-4">
+                                <div class="card-header border-0">
+                                    <div class="row align-items-baseline">
+                                        <div class="form-group col-8">
 
-                                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            <p>@post.Caption</p>
+                                        </div>
+                                        <div class="col-2">
+                                            <button type="submit" class="btn btn-primary">Eliminar</button>
+                                        </div>
+                                        <div class="col-1">
+                                            <button type="submit" class="btn btn-primary">Editar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                @if (post.ImgPost != null)
+                                {
+                                    <div class="card-body">
+                                        <img src="@post.ImgPost" class="img-fluid">
+                                    </div>
+                                }
+
+                                <div class="card-footer border-0">
+                                    <div class="d-flex align-items-center">
+                                        <img src="img/imagen3.jpg" class="rounded-circle" style=" max-width: 6%; max-height: 50px;">
+                                        <p class="comment overflow-hidden flex-grow-1">Comentario: S  ed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+                                        <button class="btn btn-sm btn-link">Reply</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-2">
-                                <button type="submit" class="btn btn-primary">Eliminar</button>
-                            </div>
-                            <div class="col-1">
-                                <button type="submit" class="btn btn-primary">Editar</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <img src="img/imagen1.jpg" class="img-fluid">
-                    </div>
-                    <div class="card-footer border-0">
-                        <div class="d-flex align-items-center">
-                            <img src="img/imagen3.jpg" class="rounded-circle" style=" max-width: 6%; max-height: 50px;"> <!-- Establecí un ancho y alto máximo de 50px -->
-                            <p class="comment overflow-hidden flex-grow-1">Comentario: S  ed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-                            <button class="btn btn-sm btn-link">Reply</button>
-                        </div>
-                    </div>
-                </div>
+                        }
+                    }
+                }
+                
             </div>
         </div>
     </div>

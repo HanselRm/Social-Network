@@ -7,7 +7,7 @@ using SocialNet.Core.Domain.Entities;
 
 namespace SocialNet.Core.Application.Services
 {
-    public class PostServices : GenericServices<SavePostViewModel, PostViewModel, Post>
+    public class PostServices : GenericServices<SavePostViewModel, PostViewModel, Post>, IPostServices
     {
         private readonly IPostRepository _postRepository;
         private readonly IMapper _mapper;

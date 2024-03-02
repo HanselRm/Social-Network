@@ -13,6 +13,8 @@ namespace SocialNet.Core.Application
             service.AddAutoMapper(Assembly.GetExecutingAssembly());
             #region Service Dependency
             service.AddTransient<IUserServices, UserServices>();
+            service.AddTransient<IPostServices, PostServices>();
+
 
             #endregion
         }

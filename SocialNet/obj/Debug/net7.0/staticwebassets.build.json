@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8+8YAKq1Mj1A9fmSRMEa/JOpYaIH+d9IbawNkSwgUOk=",
+  "Hash": "o6Yu2FuIkc3tc1SNVk1SrNEuEGcC2otgUNVmR3bPnDI=",
   "Source": "SocialNet",
   "BasePath": "_content/SocialNet",
   "Mode": "Default",
@@ -131,6 +131,25 @@
       "OriginalItemSpec": "wwwroot\\images\\User\\0\\02c487d5-f746-4af4-a2ac-c72699022b03.png"
     },
     {
+      "Identity": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet\\wwwroot\\images\\User\\0\\068b32f1-3a6e-4455-8c2f-aac2d60d1eac.png",
+      "SourceId": "SocialNet",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet\\wwwroot\\",
+      "BasePath": "_content/SocialNet",
+      "RelativePath": "images/User/0/068b32f1-3a6e-4455-8c2f-aac2d60d1eac.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\User\\0\\068b32f1-3a6e-4455-8c2f-aac2d60d1eac.png"
+    },
+    {
       "Identity": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet\\wwwroot\\images\\User\\0\\1ba28a0b-ddd7-441a-8a68-534541d99b21.png",
       "SourceId": "SocialNet",
       "SourceType": "Discovered",
@@ -224,6 +243,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\User\\0\\5a313e8e-5daf-41f4-9908-1266b20b5454.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet\\wwwroot\\images\\User\\0\\62a89dea-d246-4353-a882-10211f779220.png",
+      "SourceId": "SocialNet",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet\\wwwroot\\",
+      "BasePath": "_content/SocialNet",
+      "RelativePath": "images/User/0/62a89dea-d246-4353-a882-10211f779220.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\User\\0\\62a89dea-d246-4353-a882-10211f779220.png"
     },
     {
       "Identity": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet\\wwwroot\\images\\User\\0\\634f5d71-ce34-4fb9-a436-3dffcb5b7852.jpg",
@@ -395,6 +433,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\User\\0\\c1176a06-03ce-4241-8f89-4e8e21c8bf49.png"
+    },
+    {
+      "Identity": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet\\wwwroot\\images\\User\\0\\d01523d9-f000-4e20-9400-fcedeaf104ce.png",
+      "SourceId": "SocialNet",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet\\wwwroot\\",
+      "BasePath": "_content/SocialNet",
+      "RelativePath": "images/User/0/d01523d9-f000-4e20-9400-fcedeaf104ce.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\User\\0\\d01523d9-f000-4e20-9400-fcedeaf104ce.png"
     },
     {
       "Identity": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet\\wwwroot\\images\\User\\0\\d5365e18-8700-4362-8331-302a73bdecf5.png",

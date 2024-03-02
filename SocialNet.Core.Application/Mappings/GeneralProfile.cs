@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using SocialNet.Core.Application.ViewModels.Posts;
 using SocialNet.Core.Application.ViewModels.Users;
 using SocialNet.Core.Domain.Entities;
 
@@ -45,6 +46,17 @@ namespace SocialNet.Core.Application.Mappings
                 .ForMember(dest => dest.LastModified, opt => opt.Ignore())
                 .ForMember(dest => dest.LastModifiedBy, opt => opt.Ignore())
                 .ForMember(dest => dest.Password, opt => opt.Ignore());
+
+            CreateMap<Post, PostViewModel>()
+                .ReverseMap()
+                .ForMember(dest => dest.User, opt => opt.Ignore())
+                .ForMember(dest => dest.Comments, opt => opt.Ignore());
+
+            CreateMap<Post, SavePostViewModel>()
+                .ForMember(dest => dest.File, opt => opt.Ignore())
+                .ReverseMap()
+                .ForMember(dest => dest.User, opt => opt.Ignore())
+                .ForMember(dest => dest.Comments, opt => opt.Ignore());
 
         }
     }
