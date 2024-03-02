@@ -4,9 +4,9 @@ using SocialNet.Core.Domain.Entities;
 
 namespace SocialNet.Core.Application.Interfaces.Services
 {
-    public interface IUserServices: IGenericServices<SaveUserViewModel, UserViewModel, User>, IUserServicesUp<EditUserViewModel>
+    public interface IUserServices : IGenericServices<SaveUserViewModel, UserViewModel, User>, IUserServicesUp<EditUserViewModel>
 
-        
+
     {
         
     }
