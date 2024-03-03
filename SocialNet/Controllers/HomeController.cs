@@ -70,6 +70,30 @@ namespace SocialNet.Controllers
             return RedirectToRoute(new { controller = "Home", action = "Index" });
 
         }
+
+        public async Task<IActionResult> AddPost(SavePostViewModel model)
+        {
+            if (!_validateUser.hasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+            ViewBag.Post = await _postServices.GetAllViewModels();
+            if (!ModelState.IsValid)
+            {
+
+                return View("Index", model);
+            }
+            if (model.File != null)
+            {
+                model.ImgPost = _uploadFiles.UploadFile(model.File, model);
+            }
+            DateTime date = DateTime.Now;
+            model.Date = new DateOnly(date.Year, date.Month, date.Day);
+            model.Hour = new TimeOnly(date.Hour, date.Minute, date.Second);
+            await _postServices.Add(model);
+
+            return RedirectToRoute(new { controller = "Home", action = "Index" });
+        }
     }
     
 }

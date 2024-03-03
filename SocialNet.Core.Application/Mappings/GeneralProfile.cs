@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using SocialNet.Core.Application.ViewModels.Posts;
 using SocialNet.Core.Application.ViewModels.Users;
+using SocialNet.Core.Application.ViewModels.Comments;
 using SocialNet.Core.Domain.Entities;
 
 namespace SocialNet.Core.Application.Mappings
@@ -57,6 +58,26 @@ namespace SocialNet.Core.Application.Mappings
                 .ReverseMap()
                 .ForMember(dest => dest.User, opt => opt.Ignore())
                 .ForMember(dest => dest.Comments, opt => opt.Ignore());
+
+            CreateMap<Comments, CommentsViewModel>()
+                .ForMember(dest => dest.UserName, opt => opt.Ignore())
+                .ForMember(dest => dest.PhotoUrl, opt => opt.Ignore())
+                .ForMember(dest => dest.CommentsChild, opt => opt.Ignore())
+                .ReverseMap()
+                .ForMember(dest => dest.Date, opt => opt.Ignore())
+                .ForMember(dest => dest.Post, opt => opt.Ignore())
+                .ForMember(dest => dest.User, opt => opt.Ignore())
+                .ForMember(dest => dest.ParentComment, opt => opt.Ignore())
+                .ForMember(dest => dest.ChildComments, opt => opt.Ignore());
+
+            CreateMap<Comments, SaveCommentViewModel>()
+                .ReverseMap()
+                .ForMember(dest => dest.Date, opt => opt.Ignore())
+                .ForMember(dest => dest.Post, opt => opt.Ignore())
+                .ForMember(dest => dest.User, opt => opt.Ignore())
+                .ForMember(dest => dest.ParentComment, opt => opt.Ignore())
+                .ForMember(dest => dest.ChildComments, opt => opt.Ignore());
+
 
         }
     }

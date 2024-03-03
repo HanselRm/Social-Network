@@ -8,15 +8,15 @@ namespace SocialNet.Core.Application.ViewModels.Comments
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "Debe escribir un comentario")]
-        public required string Content { get; set; }
+        public required string Comment { get; set; }
 
-        public int PublicationsId { get; set; }
+        public int IdPost { get; set; }
 
-        public int UserId { get; set; }
+        public int IdUser { get; set; }
         public required string UserName { get; set; }
 
         public required string PhotoUrl { get; set; }
-        public int? childId { get; set; }
+        public int? ParentCommentId { get; set; }
         public List<CommentsViewModel>? CommentsChild { get; set; }
 
     }

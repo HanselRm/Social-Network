@@ -32,7 +32,7 @@ namespace SocialNet.Core.Application.Services
                 Date = model.Date,
                 Hour = model.Hour,
                 IdUser = model.IdUser,
-                CommentList = commentList.Where(a => a.PublicationsId == model.Id).ToList(),
+                CommentList = commentList.Where(a => a.IdPost == model.Id).ToList(),
             }).ToList();
 
         }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0lSZ94W5s2YmoShYgEhWXoU4BdQF5rnxlCtb7FN4I6Y=",
+  "Hash": "xNAp49LRDOrI1SRO03yS0e1WusUp71YFXE6NSek0h90=",
   "Source": "SocialNet",
   "BasePath": "_content/SocialNet",
   "Mode": "Default",
@@ -414,6 +414,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\User\\0\\9f4cff75-4e5c-41c2-b2fb-681fc75f03af.png"
+    },
+    {
+      "Identity": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet\\wwwroot\\images\\User\\0\\b39dbf13-b0bf-404c-9a9a-af914554e99a.jpg",
+      "SourceId": "SocialNet",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet\\wwwroot\\",
+      "BasePath": "_content/SocialNet",
+      "RelativePath": "images/User/0/b39dbf13-b0bf-404c-9a9a-af914554e99a.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\User\\0\\b39dbf13-b0bf-404c-9a9a-af914554e99a.jpg"
     },
     {
       "Identity": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet\\wwwroot\\images\\User\\0\\b4afcde4-e48c-4f85-ab5c-b10bc84b070f.jpg",

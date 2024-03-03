@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace SocialNet.Core.Application.ViewModels.Comments
 {
     public class SaveCommentViewModel
     {
         public int Id { get; set; }
 
-        public string Content { get; set; }
+        public string Comment { get; set; }
 
-        public int PublicationsId { get; set; }
+        public int IdPost { get; set; }
 
-        public string UserId { get; set; }
+        public int IdUser { get; set; }
+        public int? ParentCommentId { get; set; }
+
     }
 }

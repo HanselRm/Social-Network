@@ -96,16 +96,49 @@
                                             <a asp-controller="Home" asp-action="DeletePost" asp-route-Id="@post.Id" class="btn btn-primary">Eliminar</a>
                                         </div>
                                         <div class="col-1">
-                                            <button type="submit" class="btn btn-primary">Editar</button>
+                                            <button type="submit" class="btn btn-primary edit-btn">Editar</button>
                                         </div>
                                     </div>
                                 </div>
+                                <form asp-controller="Home" asp-action="EditPost" enctype="multipart/form-data" class="row align-items-baseline edit-form d-none">
+                                    <div class="form-group col-10">
+                                        <input asp-for="Caption" type="text" class="form-control form-control-lg" placeholder="Editar publicacion" />
+                                        <span asp-validation-for="Caption" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group col-10">
+                                        <div class="input-group">
+                                            <div class="custom-file">
+                                                <input asp-for="File" type="file" class="custom-file-input" />
+                                                <label class="custom-file-label" asp-for="File">
+                                                    <i class="fas fa-image"></i> Seleccionar imagen
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" asp-for="IdUser" value="@user.Id" />
+                                    <input type="hidden" asp-for="Id" value="@post.Id" />
+                                    <div class="col-2">
+                                        <button type="submit" class="btn btn-primary">Aplicar cambios</button>
+                                    </div>
+                                </form>
                                 @if (post.ImgPost != null)
                                 {
                                     <div class="card-body">
                                         <img src="@post.ImgPost" class="img-fluid">
+                                        
                                     </div>
+
                                 }
+                                <form asp-controller="Comment" asp-action="AddComment" method="post" class="ms-lg-5 row mt-2">
+
+                                    <input type="text" name="C" id="C" class="form-control col-9" />
+
+                                    <input type="hidden" name="PId" id="" value="@post.Id" />
+
+                                    <input type="hidden" name="UId" id="UId" value="@user.Id" />
+
+                                    <button type="submit" class="btn btn-sm btn-link col-2">Responder</button>
+                                </form>
                                 @if (post.CommentList != null )
                                 {
                                     @foreach (var comment in post.CommentList)
@@ -115,8 +148,20 @@
                                                 <img src="@comment.PhotoUrl" class="rounded-circle mr-2" style="width: 50px; height: 50px;" alt="Foto de perfil">
                                                 <div class="media-body">
                                                     <h5 class="mt-0">@comment.UserName</h5>
-                                                    <p class="comment">@comment.Content</p>
-                                                    <button class="btn btn-sm btn-link">Responder</button>
+                                                    <p class="comment">@comment.Comment</p>
+
+                                                    <form method="post" class="ml-5 row" asp-controller="Comment" asp-action="AddCommentChild">
+
+                                                        <input type="text" name="C" class="form-control col-7" />
+                                                        <input type="hidden" name="PId" id="" value="@post.Id" />
+
+                                                        <input type="hidden" name="UId" id="UId" value="@user.Id" />
+                                                        <input type="hidden" name="CC" id="CC" value="@comment.Id" />
+
+                                                        <button type="submit" class="btn btn-sm btn-link col-2">Responder</button>
+
+                                                    </form>
+
                                                     <!-- reply -->
                                                     @if (comment.CommentsChild != null )
                                                     {
@@ -126,7 +171,7 @@
                                                                 <img src="@childComment.PhotoUrl" class="rounded-circle mr-3" style="width: 50px; height: 50px;" alt="Foto de perfil">
                                                                 <div class="media-body">
                                                                     <h5 class="mt-0">@childComment.UserName</h5>
-                                                                    <p class="comment">@childComment.Content</p>
+                                                                    <p class="comment">@childComment.Comment</p>
                                                                 </div>
                                                             </div>
                                                         } 
@@ -148,5 +193,13 @@
             </div>
         </div>
     </div>
+    <script>
+        document.querySelectorAll('.edit-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                document.querySelector('.edit-form').classList.toggle('d-none');
+            });
+        });
+    </script>
+
 
 </body>

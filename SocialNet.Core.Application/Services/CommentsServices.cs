@@ -25,10 +25,10 @@ namespace SocialNet.Core.Application.Services
                 .ToDictionary(g => g.Key, g => g.Select(c => new CommentsViewModel
                 {
                     Id = c.Id,
-                    Content = c.Comment,
+                    Comment = c.Comment,
                     PhotoUrl = c.User.Imagen,
-                    PublicationsId = c.IdPost,
-                    UserId = c.IdUser,
+                    IdPost = c.IdPost,
+                    IdUser = c.IdUser,
                     UserName = c.User.UserName
                 }).ToList());
 
@@ -38,10 +38,10 @@ namespace SocialNet.Core.Application.Services
                 .Select(c => new CommentsViewModel
                 {
                     Id = c.Id,
-                    Content = c.Comment,
+                    Comment = c.Comment,
                     PhotoUrl = c.User.Imagen,
-                    PublicationsId = c.IdPost,
-                    UserId = c.IdUser,
+                    IdPost = c.IdPost,
+                    IdUser = c.IdUser,
                     UserName = c.User.UserName,
                     CommentsChild = childCommentsDict.ContainsKey(c.Id) ? childCommentsDict[c.Id] : new List<CommentsViewModel>()
                 })
