@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SocialNet.Core.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d56b2a3f1fb71d14939ff7171abc4c403076999")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad4f891a5e30dfc7513700ad12551712acf50aaa")]
 [assembly: System.Reflection.AssemblyProductAttribute("SocialNet.Core.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SocialNet.Core.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

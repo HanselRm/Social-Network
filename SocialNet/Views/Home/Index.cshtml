@@ -55,7 +55,7 @@
                             <div class="form-group col-10">
                                 <div class="input-group">
                                     <div class="custom-file">
-                                        <input asp-for="File" type="file" class="custom-file-input"/>
+                                        <input asp-for="File" type="file" class="custom-file-input" />
                                         <label class="custom-file-label" asp-for="File">
                                             <i class="fas fa-image"></i> Seleccionar imagen
                                         </label>
@@ -76,10 +76,10 @@
             <div class="col-md-8">
                 @{
                     var userPublications = ((List<PostViewModel>)ViewBag.Post)
-                        .Where(p => p.IdUser == user.Id)
-                        .OrderByDescending(a => a.Date)
-                        .ThenByDescending(b => b.Hour)
-                        .ToList();
+                    .Where(p => p.IdUser == user.Id)
+                    .OrderByDescending(a => a.Date)
+                    .ThenByDescending(b => b.Hour)
+                    .ToList();
 
                     if (userPublications.Any())
                     {
@@ -106,9 +106,9 @@
                                         <img src="@post.ImgPost" class="img-fluid">
                                     </div>
                                 }
-                                @if (post.CommentList != null || post.CommentList.Count() != 0)
+                                @if (post.CommentList != null )
                                 {
-                                    @foreach(var comment in post.CommentList)
+                                    @foreach (var comment in post.CommentList)
                                     {
                                         <div class="card-footer border-end-0">
                                             <div class="media">
@@ -118,28 +118,33 @@
                                                     <p class="comment">@comment.Content</p>
                                                     <button class="btn btn-sm btn-link">Responder</button>
                                                     <!-- reply -->
-                                                    
-                                                        <div class="media mt-3">
-                                                            <img src="" class="rounded-circle mr-3" style="width: 50px; height: 50px;" alt="Foto de perfil">
-                                                            <div class="media-body">
-                                                                <h5 class="mt-0">Nombre de usuario</h5>
-                                                                <p class="comment">Respuesta al comentario anterior. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                                                <button class="btn btn-sm btn-link">Responder</button>
+                                                    @if (comment.CommentsChild != null )
+                                                    {
+                                                        @foreach (var childComment in comment.CommentsChild)
+                                                        {
+                                                            <div class="media mt-3">
+                                                                <img src="@childComment.PhotoUrl" class="rounded-circle mr-3" style="width: 50px; height: 50px;" alt="Foto de perfil">
+                                                                <div class="media-body">
+                                                                    <h5 class="mt-0">@childComment.UserName</h5>
+                                                                    <p class="comment">@childComment.Content</p>
+                                                                </div>
                                                             </div>
-                                                        </div>
+                                                        } 
                                                     }
+
+                                                    
                                                 </div>
                                             </div>
                                         </div>
                                     }
-                                    
+
                                 }
-                                
+
                             </div>
                         }
                     }
                 }
-                
+
             </div>
         </div>
     </div>

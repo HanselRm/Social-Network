@@ -17,18 +17,38 @@ namespace SocialNet.Core.Application.Services
         }
         public async Task<List<CommentsViewModel>> GetAllViewModelWithInclude()
         {
-            var Post = await _commentsRepository.GetAllWithIncludeAsync(new List<string> { "User" });
+            var comments = await _commentsRepository.GetAllWithIncludeAsync(new List<string> { "User", "ParentComment" });
 
-            return Post.Select(model => new CommentsViewModel
-            {
-                Id = model.Id,
-                Content = model.Comment,
-                PhotoUrl = model.User.Imagen,
-                PublicationsId = model.IdPost,
-                UserId = model.IdUser,
-                UserName = model.User.UserName
-    
-            }).ToList();
+            var childCommentsDict = comments
+                .Where(c => c.ParentComment != null)
+                .GroupBy(c => c.ParentCommentId) 
+                .ToDictionary(g => g.Key, g => g.Select(c => new CommentsViewModel
+                {
+                    Id = c.Id,
+                    Content = c.Comment,
+                    PhotoUrl = c.User.Imagen,
+                    PublicationsId = c.IdPost,
+                    UserId = c.IdUser,
+                    UserName = c.User.UserName
+                }).ToList());
+
+            
+            var mainComments = comments
+                .Where(c => c.ParentComment == null) 
+                .Select(c => new CommentsViewModel
+                {
+                    Id = c.Id,
+                    Content = c.Comment,
+                    PhotoUrl = c.User.Imagen,
+                    PublicationsId = c.IdPost,
+                    UserId = c.IdUser,
+                    UserName = c.User.UserName,
+                    CommentsChild = childCommentsDict.ContainsKey(c.Id) ? childCommentsDict[c.Id] : new List<CommentsViewModel>()
+                })
+                .ToList();
+
+            return mainComments;
+
         }
     }
 
