@@ -11,10 +11,31 @@ namespace SocialNet.Core.Application.Services
     {
         private readonly IPostRepository _postRepository;
         private readonly IMapper _mapper;
-        public PostServices(IPostRepository postRepository, IMapper mapper) : base(postRepository, mapper)
+        private readonly ICommentsServices _commentsService;
+        public PostServices(IPostRepository postRepository, IMapper mapper, ICommentsServices commentsService) : base(postRepository, mapper)
         {
             _postRepository = postRepository;
             _mapper = mapper;
+            _commentsService = commentsService;
+        }
+
+        public async Task<List<PostViewModel>> GetAllViewModelWithInclude()
+        {
+            var Post = await _postRepository.GetAllWithIncludeAsync(new List<string> { "Comments" });
+            var commentList = await _commentsService.GetAllViewModelWithInclude();
+
+            return Post.Select(model => new PostViewModel
+            {
+                Id = model.Id,
+                Caption = model.Caption,
+                ImgPost = model.ImgPost,
+                Date = model.Date,
+                Hour = model.Hour,
+                IdUser = model.IdUser,
+                CommentList = commentList.Where(a => a.PublicationsId == model.Id).ToList(),
+            }).ToList();
+
         }
     }
+    
 }

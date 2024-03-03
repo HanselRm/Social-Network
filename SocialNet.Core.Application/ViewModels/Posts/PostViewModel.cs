@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using SocialNet.Core.Application.ViewModels.Comments;
 
 
 namespace SocialNet.Core.Application.ViewModels.Posts
@@ -12,6 +13,6 @@ namespace SocialNet.Core.Application.ViewModels.Posts
         public DateOnly Date { get; set; }
         public TimeOnly Hour { get; set; }
         public int IdUser { get; set; }
-        public int IdComment { get; set; }
+        public List<CommentsViewModel>? CommentList { get; set; }
     }
 }

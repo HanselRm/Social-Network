@@ -14,6 +14,7 @@ namespace SocialNet.Core.Application
             #region Service Dependency
             service.AddTransient<IUserServices, UserServices>();
             service.AddTransient<IPostServices, PostServices>();
+            service.AddTransient<ICommentsServices, CommentsServices>();
 
 
             #endregion

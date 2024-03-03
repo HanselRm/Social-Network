@@ -6,6 +6,6 @@ namespace SocialNet.Core.Application.Interfaces.Services
 {
     public interface IPostServices : IGenericServices<SavePostViewModel, PostViewModel, Post>
     {
-        
+        Task<List<PostViewModel>> GetAllViewModelWithInclude();
     }
 }

@@ -29,7 +29,7 @@ namespace SocialNet.Controllers
             {
                 return RedirectToRoute(new { controller = "User", action = "Index" });
             }
-            ViewBag.Post = await _postServices.GetAllViewModels();
+            ViewBag.Post = await _postServices.GetAllViewModelWithInclude();
             return View();  
         }
 
@@ -59,5 +59,17 @@ namespace SocialNet.Controllers
             return RedirectToRoute(new { controller = "Home", action = "Index" });
         }
 
+        public async Task<IActionResult> DeletePost(int Id)
+        {
+            if (!_validateUser.hasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+           await _postServices.Delete(Id);
+
+            return RedirectToRoute(new { controller = "Home", action = "Index" });
+
+        }
     }
+    
 }
