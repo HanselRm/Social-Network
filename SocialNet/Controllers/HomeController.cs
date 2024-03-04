@@ -70,8 +70,8 @@ namespace SocialNet.Controllers
             return RedirectToRoute(new { controller = "Home", action = "Index" });
 
         }
-
-        public async Task<IActionResult> AddPost(SavePostViewModel model)
+        
+        public async Task<IActionResult> EditPost(SavePostViewModel model)
         {
             if (!_validateUser.hasUser())
             {
@@ -80,17 +80,20 @@ namespace SocialNet.Controllers
             ViewBag.Post = await _postServices.GetAllViewModels();
             if (!ModelState.IsValid)
             {
-
                 return View("Index", model);
             }
             if (model.File != null)
             {
                 model.ImgPost = _uploadFiles.UploadFile(model.File, model);
             }
-            DateTime date = DateTime.Now;
-            model.Date = new DateOnly(date.Year, date.Month, date.Day);
-            model.Hour = new TimeOnly(date.Hour, date.Minute, date.Second);
-            await _postServices.Add(model);
+            else
+            {
+                SavePostViewModel model2 = await _postServices.GetByIdSaveViewModel((int)model.Id);
+                model.ImgPost = model2.ImgPost;
+            }
+            
+
+            await _postServices.Update(model, (int)model.Id);
 
             return RedirectToRoute(new { controller = "Home", action = "Index" });
         }

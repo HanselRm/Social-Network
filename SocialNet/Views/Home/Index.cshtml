@@ -102,7 +102,7 @@
                                 </div>
                                 <form asp-controller="Home" asp-action="EditPost" enctype="multipart/form-data" class="row align-items-baseline edit-form d-none">
                                     <div class="form-group col-10">
-                                        <input asp-for="Caption" type="text" class="form-control form-control-lg" placeholder="Editar publicacion" />
+                                        <input asp-for="Caption" type="text" class="form-control form-control-lg" placeholder="Editar publicacion" value="@post.Caption" />
                                         <span asp-validation-for="Caption" class="text-danger"></span>
                                     </div>
                                     <div class="form-group col-10">
