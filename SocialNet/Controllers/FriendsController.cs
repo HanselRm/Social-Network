@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SocialNet.Core.Application.Interfaces.Services;
 using SocialNet.Core.Application.ViewModels.Friends;
+using SocialNet.Core.Domain.Entities;
 using SocialNet.MiddledWares;
 
 namespace SocialNet.Controllers
@@ -19,7 +20,11 @@ namespace SocialNet.Controllers
         }
         public async Task <IActionResult> Index(int id)
         {
-            
+            if (!_validateUser.hasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+
             ViewBag.listPost = await _friendsServices.GetAllViewModelWithInclude(id);
             return View();
         }
@@ -50,13 +55,19 @@ namespace SocialNet.Controllers
             {
                 model.IdFriend2 = user2.Id;
                 await _friendsServices.Add(model);
-                return RedirectToRoute(new { controller = "Friends", action = "Index" });
-            }
-            
-            
-            ViewBag.listPost = await _friendsServices.GetAllViewModelWithInclude(model.IdFriend1);
+                return RedirectToRoute(new { controller = "Friends", action = "Index", id = model.IdFriend1 });
 
-            return View("Index");
+            }
+            return RedirectToRoute(new { controller = "Friends", action = "Index", id = model.IdFriend1 });
+
+        }
+
+        public async Task<IActionResult> Delete(int id, int IDUser) 
+        {
+
+            await _friendsServices.Delete(id);
+            return RedirectToRoute(new { controller = "Friends", action = "Index", id = IDUser });
+
         }
     }
 }
