@@ -5,6 +5,7 @@ C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core.Domain\obj\Debug\net7.0\SocialNet.Core.Domain.AssemblyInfoInputs.cache
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core.Domain\obj\Debug\net7.0\SocialNet.Core.Domain.AssemblyInfo.cs
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core.Domain\obj\Debug\net7.0\SocialNet.Core.Domain.csproj.CoreCompileInputs.cache
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core.Domain\obj\Debug\net7.0\SocialNet.Core.Domain.sourcelink.json
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core.Domain\obj\Debug\net7.0\SocialNet.Core.Domain.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core.Domain\obj\Debug\net7.0\refint\SocialNet.Core.Domain.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core.Domain\obj\Debug\net7.0\SocialNet.Core.Domain.pdb

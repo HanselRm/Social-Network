@@ -91,7 +91,7 @@ namespace SocialNet.Infrastructure.Persistence.Context
                 .HasMany(e => e.Comments)
                 .WithOne(e => e.Post)
                 .HasForeignKey(e => e.IdPost)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
             //Comment relations
 
             modelBuilder.Entity<Comments>()

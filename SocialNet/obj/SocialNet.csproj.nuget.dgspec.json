@@ -44,6 +44,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
               "version": "[2.2.2, )"
@@ -212,6 +216,82 @@
         }
       }
     },
+    "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet.Infrastructure.Shared\\SocialNet.Infrastructure.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet.Infrastructure.Shared\\SocialNet.Infrastructure.Shared.csproj",
+        "projectName": "SocialNet.Infrastructure.Shared",
+        "projectPath": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet.Infrastructure.Shared\\SocialNet.Infrastructure.Shared.csproj",
+        "packagesPath": "C:\\Users\\HanselRodriguezMejia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet.Infrastructure.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\HanselRodriguezMejia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet.Core.Application\\SocialNet.Core.Application.csproj": {
+                "projectPath": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet.Core.Application\\SocialNet.Core.Application.csproj"
+              },
+              "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet.Core.Domain\\SocialNet.Core.Domain.csproj": {
+                "projectPath": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet.Core.Domain\\SocialNet.Core.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet\\SocialNet.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -244,6 +324,9 @@
               },
               "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet.Infrastructure.Persistence\\SocialNet.Infrastructure.Persistence.csproj": {
                 "projectPath": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet.Infrastructure.Persistence\\SocialNet.Infrastructure.Persistence.csproj"
+              },
+              "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet.Infrastructure.Shared\\SocialNet.Infrastructure.Shared.csproj": {
+                "projectPath": "C:\\Users\\HanselRodriguezMejia\\Desktop\\practica 3\\Social\\SocialNet\\SocialNet.Infrastructure.Shared\\SocialNet.Infrastructure.Shared.csproj"
               }
             }
           }

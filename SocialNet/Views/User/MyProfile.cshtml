@@ -1,0 +1,84 @@
+﻿@using SocialNet.Core.Application.ViewModels.Users;
+@model EditUserViewModel;
+@{
+    ViewData["Title"] = "Login Page";
+}
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container rounded bg-white mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-3 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                    <img class="rounded-circle mt-5"
+                         width="150px"
+                         src="@Model.Imagen">
+                    <span class="font-weight-bold">@Model.Name</span>
+                    <span class="text-black-50">@Model.Email</span><span> </span>
+                </div>
+            </div>
+            <div class="col-md-5 border-right">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Editar Perfil</h4>
+                    </div>
+
+                    <form method="post" enctype="multipart/form-data" asp-controller="User" asp-action="MyProfile">
+                        <div class="row mt-2">
+                            <div class="col-md-6">
+                                <label asp-for="Name" class="labels">Nombre</label>
+                                <input asp-for="Name" type="text" class="form-control" placeholder="Nombre">
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="LastName" class="labels">Apellido</label>
+                                <input asp-for="LastName" type="text" class="form-control" placeholder="Apellido">
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <label asp-for="Phone" class="labels">Teléfono</label>
+                                <input asp-for="Phone" type="text" class="form-control" placeholder="Teléfono">
+                                <span asp-validation-for="Phone" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12">
+                                <label asp-for="Email" class="labels">Correo</label>
+                                <input asp-for="Email" type="text" class="form-control" placeholder="Correo" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12">
+                                <label asp-for="File" class="labels">Foto de perfil</label>
+                                <input asp-for="File" type="file" class="form-control" placeholder="Foto de perfil">
+                                <span asp-validation-for="File" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12">
+                                <label asp-for="Password" class="labels">Contraseña</label>
+                                <input asp-for="Password" type="password" class="form-control" placeholder="Contraseña">
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12">
+                                <label asp-for="ConfirmPassword" class="labels">Confirmar contraseña</label>
+                                <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Confirmar contraseña">
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div>
+                            <input type="hidden" asp-for="Id" />
+                            <input type="hidden" asp-for="Status" />
+
+                        </div>
+
+                        <div class="mt-5 text-center">
+                            <a class="btn btn-info profile-button" asp-controller="Home" asp-action="Index">Volver atras</a>
+                            <button class="btn btn-primary profile-button" type="submit">Guardar cambios</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>

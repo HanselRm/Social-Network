@@ -1,0 +1,157 @@
+﻿@using System;
+@model SaveFriendsViewModel;
+@using SocialNet.Core.Application.ViewModels.Users;
+@using SocialNet.Core.Application.ViewModels.Friends;
+@using SocialNet.Core.Application.ViewModels.Posts;
+@using Microsoft.AspNetCore.Http;
+@using SocialNet.Core.Application.Helpers;
+@inject IHttpContextAccessor httpContext;
+
+@{
+    SaveUserViewModel user = httpContext.HttpContext.Session.Get<SaveUserViewModel>("User");
+
+}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="row justify-content-center mb-4">
+            <!-- Lista de amigos -->
+            <div class="col-md-4">
+                <div class="friend-list" >
+                    <h5 class="">Amigos</h5>
+                    <div class="AddFriend row  justify-content-around">
+                        <form asp-controller="Friends" asp-action="AddFriends" method="post" class="col-12">
+                            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                            <input type="text" asp-for="Username" class=" col-8 sec1" placeholder="Escriba el username" />
+                            <span asp-validation-for="Username" class="text-danger"></span>
+                            
+                            <button type="submit" class="btn btn-primary col-3 sec2">Agregar</button>
+                            <input type="hidden" asp-for="IdFriend1" value="@user.Id" class="col-1" />
+
+                        </form>
+                    </div>
+                    <ul class="list-group">
+                        @foreach (var amigos in ViewBag.listPost)
+                    {
+                        <li class="list-group-item">
+                            <img src="@amigos.FriendPhoto" class="rounded-circle mr-3" style="width: 50px; height: 50px;" alt="Foto de perfil">
+                                @amigos.FriendName @amigos.FriendLastName
+                                <a asp-controller="Friends" asp-action="Delete" asp-route-Id="@amigos.Id" asp-route-IDUser="@user.Id" class="btn btn-danger">Eliminar</a>
+                            </li>
+                    }
+                    
+                    </ul>
+                </div>
+            </div>
+            
+       
+                            <div class="col-md-8 ">
+                                <div class="card">
+                    @foreach (var list in ViewBag.listPost)
+                    {
+                        @if (list.FriendPublications != null)
+                        {
+                            @foreach (var listPost in ((IEnumerable<PostViewModel>)list.FriendPublications)
+                           .OrderByDescending(a => a.Date)
+                           .ThenByDescending(b => b.Hour))
+                            {
+                                    <div class="card mb-4 mt-4">
+                                        <div class="card-header border-0">
+                                            <div class="row align-items-baseline">
+                                                <div class="form-group col-8">
+                                                <div class="media">
+                                                    <!-- Foto de perfil -->
+                                                    <img src="@list.FriendPhoto" class="rounded-circle mr-3" style="width: 50px; height: 50px;" alt="Foto de perfil">
+                                                    <div class="media-body">
+                                                            <!-- Nombre de usuario -->
+                                                            <p class="mt-0">@list.FriendName @list.FriendLastName</p>
+                                                        <p>@listPost.Caption</p>
+                                                    </div>
+                                                 </div>
+                                                 </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <img src="@listPost.ImgPost" class="img-fluid" alt="Imagen de la publicación">
+
+                                        <form asp-controller="Comment" asp-action="AddComment" method="post" class="ms-lg-5 row mt-2">
+
+                                            <input type="text" name="C" id="C" class="form-control col-9" />
+
+                                            <input type="hidden" name="PId" id="" value="@listPost.Id" />
+
+                                            <input type="hidden" name="UId" id="UId" value="@user.Id" />
+
+                                            <button type="submit" class="btn btn-sm btn-link col-2">Responder</button>
+                                        </form>
+                                        </div>
+                                        <div class="card-footer border-end-0">
+                                            @if(listPost.CommentList != null)
+                                            {
+                                                @foreach(var comment in listPost.CommentList)
+                                                {
+                                                    <div class="media">
+                                                        <!-- Foto de perfil -->
+                                                        <img src="@comment.PhotoUrl" class="rounded-circle mr-3" style="width: 50px; height: 50px;" alt="Foto de perfil">
+                                                        <div class="media-body">
+                                                            <!-- Nombre de usuario -->
+                                                            <p class="mt-0">@comment.UserName</p>
+                                                            <!-- Contenido del comentario -->
+                                                            <p class="comment">@comment.Comment</p>
+                                                        <form method="post" class="ml-5 row" asp-controller="Comment" asp-action="AddCommentChild">
+
+                                                            <input type="text" name="C" class="form-control col-7" />
+                                                            <input type="hidden" name="PId" id="" value="@listPost.Id" />
+
+                                                            <input type="hidden" name="UId" id="UId" value="@user.Id" />
+                                                            <input type="hidden" name="CC" id="CC" value="@comment.Id" />
+
+                                                            <button type="submit" class="btn btn-sm btn-link col-2">Responder</button>
+
+                                                        </form>
+                                                        @if(comment.CommentsChild != null)
+                                                        {
+                                                            @foreach(var child in comment.CommentsChild)
+                                                            {
+                                                               <div class="media mt-3">
+                                                                    <img src="@child.PhotoUrl" class="rounded-circle mr-3" style="width: 50px; height: 50px;" alt="Foto de perfil">
+                                                                    <div class="media-body">
+                                                                         <p class="mt-0">@child.UserName</p>
+                                                                        <p class="comment">@child.Comment</p>
+                                                                    </div>
+                                                                </div>
+                                                            }
+                                                        
+                                                        }
+                                                    </div>
+                                                </div>
+                                                }
+                                            }
+                                        </div>
+                                    </div>
+                            }
+                        }
+
+
+                    }
+                                </div>
+                            </div>
+             
+            
+        </div>
+    </div>
+</body>

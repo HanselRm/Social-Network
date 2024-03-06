@@ -8,6 +8,7 @@ C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core.Application\obj\Debug\net7.0\SocialNet.Core.Application.AssemblyInfoInputs.cache
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core.Application\obj\Debug\net7.0\SocialNet.Core.Application.AssemblyInfo.cs
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core.Application\obj\Debug\net7.0\SocialNet.Core.Application.csproj.CoreCompileInputs.cache
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core.Application\obj\Debug\net7.0\SocialNet.Core.Application.sourcelink.json
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core.Application\obj\Debug\net7.0\SocialNet.Core.Application.csproj.CopyComplete
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core.Application\obj\Debug\net7.0\SocialNet.Core.Application.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet.Core.Application\obj\Debug\net7.0\refint\SocialNet.Core.Application.dll

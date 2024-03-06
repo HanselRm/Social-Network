@@ -14,3 +14,4 @@ namespace SocialNet.Core.Domain.Entities
         public User User2 { get; set; }
     }
 }
+ 

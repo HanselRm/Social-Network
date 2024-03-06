@@ -190,11 +190,12 @@ namespace SocialNet.Infrastructure.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Phone")
-                        .HasColumnType("int");
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
 
                     b.Property<string>("UserName")
                         .IsRequired()
@@ -210,7 +211,7 @@ namespace SocialNet.Infrastructure.Persistence.Migrations
                     b.HasOne("SocialNet.Core.Domain.Entities.Post", "Post")
                         .WithMany("Comments")
                         .HasForeignKey("IdPost")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("SocialNet.Core.Domain.Entities.User", "User")

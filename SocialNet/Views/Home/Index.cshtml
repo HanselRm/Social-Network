@@ -1,8 +1,203 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using SocialNet.Core.Application.ViewModels.Posts;
+@using SocialNet.Core.Application.ViewModels.Comments;
+@using System;
+@model SavePostViewModel;
+@using SocialNet.Core.Application.ViewModels.Users;
+@using Microsoft.AspNetCore.Http;
+@using SocialNet.Core.Application.Helpers;
+@inject IHttpContextAccessor httpContext;
+
+@{
+    SaveUserViewModel user = httpContext.HttpContext.Session.Get<SaveUserViewModel>("User");
+
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .post {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .comment {
+            margin-left: 50px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-8 ">
+                <div class="card">
+                    <div class="card-body" style="background-color: #d1d3d6">
+
+                        <form asp-controller="Home" asp-action="AddPost" enctype="multipart/form-data" class="row align-items-baseline">
+                            <div class="form-group col-10">
+                                <input asp-for="Caption" type="text" class="form-control form-control-lg" placeholder="¿Qué estás pensando?" />
+                                <span asp-validation-for="Caption" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-10">
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input asp-for="File" type="file" class="custom-file-input" />
+                                        <label class="custom-file-label" asp-for="File">
+                                            <i class="fas fa-image"></i> Seleccionar imagen
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" asp-for="IdUser" value="@user.Id" />
+                            <div class="col-2">
+                                <button type="submit" class="btn btn-primary">Publicar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                @{
+                    var userPublications = ((List<PostViewModel>)ViewBag.Post)
+                    .Where(p => p.IdUser == user.Id)
+                    .OrderByDescending(a => a.Date)
+                    .ThenByDescending(b => b.Hour)
+                    .ToList();
+
+                    if (userPublications.Any())
+                    {
+                        foreach (PostViewModel post in userPublications)
+                        {
+                            <div class="card  mb-4">
+                                <div class="card-header border-0">
+                                    <div class="row align-items-baseline">
+                                        <div class="form-group col-8">
+
+                                            <p>@post.Caption</p>
+                                        </div>
+                                        <div class="col-2">
+                                            <a asp-controller="Home" asp-action="DeletePost" asp-route-Id="@post.Id" class="btn btn-primary">Eliminar</a>
+                                        </div>
+                                        <div class="col-1">
+                                            <button type="submit" class="btn btn-primary edit-btn">Editar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form asp-controller="Home" asp-action="EditPost" enctype="multipart/form-data" class="row align-items-baseline edit-form d-none">
+                                    <div class="form-group col-10">
+                                        <input asp-for="Caption" type="text" class="form-control form-control-lg" placeholder="Editar publicacion" value="@post.Caption" />
+                                        <span asp-validation-for="Caption" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group col-10">
+                                        <div class="input-group">
+                                            <div class="custom-file">
+                                                <input asp-for="File" type="file" class="custom-file-input" />
+                                                <label class="custom-file-label" asp-for="File">
+                                                    <i class="fas fa-image"></i> Seleccionar imagen
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" asp-for="IdUser" value="@user.Id" />
+                                    <input type="hidden" asp-for="Id" value="@post.Id" />
+                                    <div class="col-2">
+                                        <button type="submit" class="btn btn-primary">Aplicar cambios</button>
+                                    </div>
+                                </form>
+                                @if (post.ImgPost != null)
+                                {
+                                    <div class="card-body">
+                                        <img src="@post.ImgPost" class="img-fluid">
+                                        
+                                    </div>
+
+                                }
+                                <form asp-controller="Comment" asp-action="AddComment" method="post" class="ms-lg-5 row mt-2">
+
+                                    <input type="text" name="C" id="C" class="form-control col-9" />
+
+                                    <input type="hidden" name="PId" id="" value="@post.Id" />
+
+                                    <input type="hidden" name="UId" id="UId" value="@user.Id" />
+
+                                    <button type="submit" class="btn btn-sm btn-link col-2">Responder</button>
+                                </form>
+                                @if (post.CommentList != null )
+                                {
+                                    @foreach (var comment in post.CommentList)
+                                    {
+                                        <div class="card-footer border-end-0">
+                                            <div class="media">
+                                                <img src="@comment.PhotoUrl" class="rounded-circle mr-2" style="width: 50px; height: 50px;" alt="Foto de perfil">
+                                                <div class="media-body">
+                                                    <h5 class="mt-0">@comment.UserName</h5>
+                                                    <p class="comment">@comment.Comment</p>
+
+                                                    <form method="post" class="ml-5 row" asp-controller="Comment" asp-action="AddCommentChild">
+
+                                                        <input type="text" name="C" class="form-control col-7" />
+                                                        <input type="hidden" name="PId" id="" value="@post.Id" />
+
+                                                        <input type="hidden" name="UId" id="UId" value="@user.Id" />
+                                                        <input type="hidden" name="CC" id="CC" value="@comment.Id" />
+
+                                                        <button type="submit" class="btn btn-sm btn-link col-2">Responder</button>
+
+                                                    </form>
+
+                                                    <!-- reply -->
+                                                    @if (comment.CommentsChild != null )
+                                                    {
+                                                        @foreach (var childComment in comment.CommentsChild)
+                                                        {
+                                                            <div class="media mt-3">
+                                                                <img src="@childComment.PhotoUrl" class="rounded-circle mr-3" style="width: 50px; height: 50px;" alt="Foto de perfil">
+                                                                <div class="media-body">
+                                                                    <h5 class="mt-0">@childComment.UserName</h5>
+                                                                    <p class="comment">@childComment.Comment</p>
+                                                                </div>
+                                                            </div>
+                                                        } 
+                                                    }
+
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+
+                                }
+
+                            </div>
+                        }
+                    }
+                }
+
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.edit-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                document.querySelector('.edit-form').classList.toggle('d-none');
+            });
+        });
+    </script>
+
+
+</body>

@@ -302,9 +302,12 @@ C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\refs\System.Xml.XPath.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\refs\System.Xml.XPath.XDocument.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\refs\WindowsBase.dll
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\AutoMapper.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\Humanizer.dll
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\MailKit.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
@@ -348,6 +351,7 @@ C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\MimeKit.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\NuGet.Common.dll
@@ -371,6 +375,7 @@ C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\System.Memory.Data.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\System.Reflection.MetadataLoadContext.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\System.Security.Permissions.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\System.Windows.Extensions.dll
@@ -523,14 +528,17 @@ C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\SocialNet.Core.Application.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\SocialNet.Core.Domain.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\SocialNet.Infrastructure.Persistence.dll
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\SocialNet.Infrastructure.Shared.dll
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\SocialNet.Core.Application.pdb
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\SocialNet.Core.Domain.pdb
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\SocialNet.Infrastructure.Persistence.pdb
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\bin\Debug\net7.0\SocialNet.Infrastructure.Shared.pdb
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\SocialNet.csproj.AssemblyReference.cache
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\SocialNet.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\SocialNet.AssemblyInfoInputs.cache
@@ -540,6 +548,7 @@ C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\SocialNet.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\SocialNet.RazorAssemblyInfo.cache
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\SocialNet.RazorAssemblyInfo.cs
+C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\SocialNet.sourcelink.json
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\staticwebassets.development.json
 C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet\obj\Debug\net7.0\staticwebassets\msbuild.SocialNet.Microsoft.AspNetCore.StaticWebAssets.props
