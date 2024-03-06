@@ -23,6 +23,7 @@ namespace SocialNet.Infrastructure.Persistence
             service.AddTransient<IUserRepository, UserRepository>();
             service.AddTransient<IPostRepository, PostRepository>();
             service.AddTransient<ICommentsRepository, CommentsRepository>();
+            service.AddTransient<IFriendsRepossitory, FriendsRepository>();
             #endregion
 
             return service;

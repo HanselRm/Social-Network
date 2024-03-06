@@ -18,6 +18,10 @@ namespace SocialNet.Controllers
         [HttpPost]
         public async Task<IActionResult> AddComment(string C, int PId, int UId)
         {
+            if (!_validateUser.hasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
             SaveCommentViewModel coment = new SaveCommentViewModel
             {
                 Comment = C,
@@ -32,6 +36,10 @@ namespace SocialNet.Controllers
         [HttpPost]
         public async Task<IActionResult> AddCommentChild(string C, int PId, int UId, int CC)
         {
+            if (!_validateUser.hasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
             SaveCommentViewModel coment = new SaveCommentViewModel
             {
                 Comment = C,

@@ -120,7 +120,7 @@ namespace SocialNet.Controllers
             return RedirectToRoute(new { controller = "User", action = "Index" });
         }
 
-        public async Task<IActionResult> PasswordRecover()
+        public IActionResult PasswordRecover()
         {
             return View("PasswordRecover");
         }

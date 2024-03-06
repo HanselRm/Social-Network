@@ -15,6 +15,7 @@ namespace SocialNet.Core.Application
             service.AddTransient<IUserServices, UserServices>();
             service.AddTransient<IPostServices, PostServices>();
             service.AddTransient<ICommentsServices, CommentsServices>();
+            service.AddTransient<IFriendsServices, FriendsServices>();
 
 
             #endregion

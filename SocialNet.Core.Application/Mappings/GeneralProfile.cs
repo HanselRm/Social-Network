@@ -3,6 +3,7 @@ using SocialNet.Core.Application.ViewModels.Posts;
 using SocialNet.Core.Application.ViewModels.Users;
 using SocialNet.Core.Application.ViewModels.Comments;
 using SocialNet.Core.Domain.Entities;
+using SocialNet.Core.Application.ViewModels.Friends;
 
 namespace SocialNet.Core.Application.Mappings
 {
@@ -78,7 +79,11 @@ namespace SocialNet.Core.Application.Mappings
                 .ForMember(dest => dest.ParentComment, opt => opt.Ignore())
                 .ForMember(dest => dest.ChildComments, opt => opt.Ignore());
 
-
+            CreateMap<Friends, SaveFriendsViewModel>()
+                .ForMember(dest => dest.Username, opt => opt.Ignore())
+                .ReverseMap()
+                .ForMember(dest => dest.User1, opt => opt.Ignore())
+                .ForMember(dest => dest.User2, opt => opt.Ignore());
         }
     }
 }

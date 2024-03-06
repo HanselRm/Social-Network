@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\HanselRodriguezMejia\Desktop\practica 3\Social\SocialNet\SocialNet
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/HanselRodriguezMejia/Desktop/practica 3/Social/SocialNet/SocialNet/Views/Friends/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnJpZW5kc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/HanselRodriguezMejia/Desktop/practica 3/Social/SocialNet/SocialNet/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
